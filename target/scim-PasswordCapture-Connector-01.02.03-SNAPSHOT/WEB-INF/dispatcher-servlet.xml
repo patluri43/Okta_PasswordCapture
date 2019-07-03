@@ -1,0 +1,25 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+    <!--this is the required spring configuration file that is included within the scim-server-sdk jar-->
+    <import resource="classpath:opp-sdk-config.xml"/>
+
+    <!--Database service PasswordCapture-->
+    <bean id="service" class="com.okta.scim.server.PasswordCapture.PasswordCaptureSCIMServiceImpl">
+        <property name="serverName" value="localhost"/>
+        <property name="serverPort" value="3306"/>
+        <property name="userName" value="genesys"/>
+        <property name="password" value="changeit"/>
+        <property name="databaseName" value="employees"/>
+
+        <!--Database type sqlserver/mysql -->
+        <property name="databaseType" value="mysql"/>
+        <property name="databaseConnectionURL" value="jdbc:sqlserver://support.db.inin:1433;databaseName=oktaopp;user=oktaopp;password=*****;"/>
+
+        <!--OPP Application name in Okta
+        <property name="oktaAppName" value="praveenatluri_onprempasswordcaptureapp_1"/>-->
+    </bean>
+
+</beans>
