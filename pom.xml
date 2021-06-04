@@ -23,7 +23,7 @@
         <org.slf4j-api.version>1.7.10</org.slf4j-api.version>
         <unboundid-scim-sdk.version>1.3.2</unboundid-scim-sdk.version>
         <org.codehaus.jackson.version>1.9.13</org.codehaus.jackson.version>
-        <org.apache.httpcomponents.httpclient.version>4.3.5</org.apache.httpcomponents.httpclient.version>
+        <org.apache.httpcomponents.httpclient.version>4.5.13</org.apache.httpcomponents.httpclient.version>
     </properties>
 
     <dependencies>
